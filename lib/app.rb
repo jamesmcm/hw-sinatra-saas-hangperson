@@ -34,7 +34,8 @@ class HangpersonApp < Sinatra::Base
   post '/guess' do
     # get the guessed letter from params[:guess] (note: if user left it blank,
     #   params[:guess] will be nil)
-
+    x=params[:guess].to_s[0]
+    
     # Try guessing the letter.  If it has already been guessed,
     #   display "You have already used that letter."
 
